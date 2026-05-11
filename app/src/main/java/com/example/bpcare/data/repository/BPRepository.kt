@@ -1,15 +1,21 @@
 package com.example.bpcare.data.repository
 
-import kotlinx.serialization.Serializable
+import com.example.bpcare.data.Model.BloodPressure
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
-@Serializable
-data class BP(
+object BPRepository {
+    private val _readings = MutableStateFlow<List<BloodPressure>>(emptyList())
+    val readings: StateFlow<List<BloodPressure>> = _readings.asStateFlow()
 
-    val systolic: Int,
+    fun getReadings(): List<BloodPressure> {
+        return _readings.value
+    }
 
-    val diastolic: Int,
-
-    val pulse: Int,
-
-    val status: String
-)
+    fun saveReading(bloodPressure: BloodPressure) {
+        val currentList = _readings.value.toMutableList()
+        currentList.add(0, bloodPressure) // Add to the top
+        _readings.value = currentList
+    }
+}

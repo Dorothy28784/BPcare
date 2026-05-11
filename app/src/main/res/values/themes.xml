@@ -9,7 +9,7 @@
         <item name="windowSplashScreenBackground">@color/white</item>
 
         <!-- Icon to be displayed in the center -->
-        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
 
         <!-- The theme to switch to after the splash screen finishes -->
         <item name="postSplashScreenTheme">@style/Theme.BpCare</item>

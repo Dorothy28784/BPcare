@@ -1,8 +1,10 @@
 [versions]
 agp = "9.2.1"
+authKt = "3.6.0"
 bom = "3.6.0"
 coreKtx = "1.10.1"
-coreSplashscreen = "1.2.0"
+coreSplashscreen = "1.0.1"
+coreSplashscreenVersion = "1.2.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
@@ -13,12 +15,14 @@ activityCompose = "1.8.0"
 kotlin = "2.2.10"
 composeBom = "2026.02.01"
 lifecycleViewmodelCompose = "2.10.0"
+lottieCompose = "6.7.1"
 navigationRuntimeKtx = "2.9.8"
 navigationCompose = "2.9.8"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+androidx-core-splashscreen-v120 = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreenVersion" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
 # Removed typo version
 auth-kt = { module = "io.github.jan-tennert.supabase:auth-kt" }
@@ -39,6 +43,7 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClientAndroid" }
 lottie = { module = "com.airbnb.android:lottie" }
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottieCompose" }
 postgrest-kt = { module = "io.github.jan-tennert.supabase:postgrest-kt" }
 realtime-kt = { module = "io.github.jan-tennert.supabase:realtime-kt" }
 storage-kt = { module = "io.github.jan-tennert.supabase:storage-kt" }
@@ -46,6 +51,7 @@ androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navig
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 androidx-compose-material-icons-core = { group = "androidx.compose.material", name = "material-icons-core" }
 androidx-compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
+supabase-auth-kt = { module = "io.github.jan-tennert.supabase:auth-kt", version.ref = "authKt" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

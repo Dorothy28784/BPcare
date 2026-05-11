@@ -3,13 +3,14 @@ package com.example.bpcare.ui.Screens.HomeScreen
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.bpcare.data.Model.BloodPressure
+import com.example.bpcare.data.repository.BPRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class HomeScreenViewModel : ViewModel() {
 
-    private val repository = BPRepository()
+    private val repository = BPRepository
 
     // Latest BP Reading
     private val _latestReading =

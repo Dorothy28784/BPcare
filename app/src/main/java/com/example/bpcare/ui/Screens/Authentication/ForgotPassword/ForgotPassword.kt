@@ -6,10 +6,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
+import com.example.bpcare.ui.Navigation.ROUTES
+
 @Composable
 fun ForgotPasswordScreen(
-    viewModel: AuthViewModel,
-    onBackToLogin: () -> Unit
+    navController: NavController,
+    viewModel: ForgotPasswordViewModel = viewModel()
 ) {
 
     var email by remember { mutableStateOf("") }
@@ -60,7 +64,7 @@ fun ForgotPasswordScreen(
         Spacer(modifier = Modifier.height(20.dp))
 
         TextButton(
-            onClick = onBackToLogin
+            onClick = { navController.navigate(ROUTES.Login.name) }
         ) {
             Text("Back to Login")
         }
