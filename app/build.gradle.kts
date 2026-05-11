@@ -7,11 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.bpcare"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.bpcare"
@@ -42,7 +38,9 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.lottie.compose)
+    implementation(libs.supabase.auth.kt)
+    implementation(libs.androidx.core.splashscreen.v120)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.compose.material.icons.core)
     implementation(libs.androidx.compose.material.icons.extended)
@@ -65,16 +63,8 @@ dependencies {
 
 
 
-        //supabase
-
-    implementation(platform(libs.bom))
-    implementation(libs.postgrest.kt)
-    implementation(libs.auth.kt)
-    implementation(libs.realtime.kt)
-    implementation(libs.storage.kt)
-
-   //ktor
-    implementation(libs.ktor.client.android)
+    //supabase
+    // Removed Supabase dependencies
 
 
 

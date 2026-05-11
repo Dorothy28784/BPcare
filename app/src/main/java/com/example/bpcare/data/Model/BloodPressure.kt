@@ -4,6 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class BloodPressure(
+    val id: String? = null,
 
     val systolic: Int,
 
